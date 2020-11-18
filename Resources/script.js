@@ -1,14 +1,24 @@
-const faAngleDown = document.getElementById('faAngleDown');
-const sub = document.getElementById('sub')
+const faProjects = document.getElementById('faProjects');
+const faContact = document.getElementById('faContact');
+const navContact = document.getElementById('navContact');
+const navProjects = document.getElementById('navProjects');
 
-const rotate180deg = event => {
-    if (getComputedStyle(sub).display === 'none') {
-        event.target.style.transform = 'rotate(180deg)';
-        sub.style.display = 'block';
-    } else {
-        event.target.style.transform = '';
-        sub.style.display = 'none';
+const rotateNeg90deg = event => {
+    if (event.target.id === 'navProjects') {
+        faProjects.style.transform = 'rotate(-90deg)';
+    } else if (event.target.id === 'navContact') {
+        faContact.style.transform = 'rotate(-90deg)';
     }
 }
 
-faAngleDown.addEventListener('click', rotate180deg);
+const resetTransform = event => {
+    if (event.target.id === 'navProjects') {
+        faProjects.style.transform = '';
+    } else if (event.target.id === 'navContact') {
+        faContact.style.transform = '';
+    }
+}
+
+[navProjects, navContact].forEach(arrElement => arrElement.addEventListener('mouseover', rotateNeg90deg));
+[navProjects, navContact].forEach(arrElement => arrElement.addEventListener('mouseout', resetTransform));
+

@@ -6,24 +6,68 @@
 
 html {
     font-size: 16px;
-    font-family: Poppins, Helvetica, sans-serif;
+    font-family: Almarai, Helvetica, sans-serif;
     font-weight: 400;
 }
 
 main {
     width: 100vw;
     height: 100vh;
-    background-color: peachpuff;
+}
+
+.banner {
+    width: 100%;
+    max-height: 100vh;
+    position: absolute;
+    z-index: 0;
+}
+
+.banner__img {
+    width: 100%;
+    height: auto;
 }
 
 header {
     width: 100%;
     height: 15%;
-    border: 1px solid blue;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     padding: 0 3%;
+    color: white;
+    position: relative;
+}
+
+.logo__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7vh;
+    height: 7vh;
+    background-color: white;
+    border-radius: 30%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.logo {
+    width: 60%;
+    height: 60%;
+}
+
+.navigation__list li {
+    display: inline;
+    margin: 0 30px;
+    cursor: pointer;
+}
+
+.navigation__list li:hover {
+    color: rgba(255,255,255,0.5);
+}
+
+.navigation__list i {
+    margin-left: 10px;
+    transition: transform 0.2s linear;
 }
 
 .search-bar {
@@ -33,39 +77,6 @@ header {
     border: 1px solid #343C49;
     border-radius: 20px;
     overflow: hidden;
-}
-
-.search-input {
-    width: 80%;
-    height: 100%;
-    border: none;
-    padding-left: 5%;
-}
-
-.icon {
-    width: 20%;
-    height: 100%;
-    float: right;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.fa-angle-down {
-    vertical-align: middle;
-    color: #343C49;
-}
-
-.icon .fa {
-    vertical-align: middle;
-    transition: transform 0.2s linear;
-}
-
-.banner {
-    width: 100%;
-    height: 50vh;
-    background-color: orange;
 }
 
 .sub {

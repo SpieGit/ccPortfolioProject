@@ -9,29 +9,33 @@
 
         <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900" 
-        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800" 
+        rel="stylesheet"> 
+
     </head>
 
     <body>
-        
+      
         <main>
 
-            <header>
-                <div class="search-bar">
-                    <input class="search-input" type="text">
-                    <div id="icon" class="icon">
-                        <i id="faAngleDown" class="fa fa-angle-down"></i>
-                    </div>
-                </div>
-                <nav></nav>
-            </header>
-    
             <section class="banner">
-                <div id="sub" class="sub">
-                    <div id="square" class="square">This is text that is normally not visible</div>
-                </div>
+                <img class ="banner__img" src="./Resources/images/banner.png" alt="">
             </section>
+
+            <header>
+                <div class="logo__container">
+                    <img class="logo" src="./Resources/images/logo.png" alt="">
+                </div>
+
+                <nav class="site__navigation">
+                    <ul class="navigation__list">
+                        <li id="navProjects">Projects<i id="faProjects" class="fa fa-angle-left"></i></li>
+                        <li id="navContact">Contact<i id="faContact" class="fa fa-angle-left"></i></li>
+                    </ul>
+                </nav>
+
+            </header>
     
             <script src="./Resources/script.js" async></script>
 
